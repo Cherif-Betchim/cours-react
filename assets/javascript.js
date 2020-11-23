@@ -26,33 +26,30 @@ class Stack {
      *  - `pop` pour retirer le dernier élément et le retourner;
      *  - et `peek` pour récupérer le premeier élément.
      */
-    //
-    // constructor() {
-    //   this.tab = [];
-    //   this.top = 0;
-    // }
-    //
-    // push(element)
-    // {
-    //   // push element into the items
-    //   this.tab.push(element);
-    //   this.top = this.top + 1;
-    // }
-    //
-    // pop()
-    // {
-    //   // return top most element in the stack
-    //   // and removes it from the stack
-    //   // Underflow if stack is empty
-    //   if (this.tab.length == 0)
-    //     return "Underflow";
-    //   return this.tab.pop();
-    // }
-    //
-    // peek() {
-    //   let i = this.tab.length;
-    //   return this.tab[0];
-    // }
+
+    constructor() {
+      this.tab = [];
+      this.top = 0;
+    }
+
+    push(element)
+    {
+      this.tab.push(element);
+      this.top = this.top + 1;
+    }
+
+    pop()
+    {
+
+      if (this.tab.length == 0)
+        return "Underflow";
+      return this.tab.pop();
+    }
+
+    peek() {
+      let i = this.tab.length;
+      return this.tab[0];
+    }
 };
 
 
@@ -68,7 +65,7 @@ const fizzBuzz = (n) => {
             console.log("fizz")
         } else if (n === 5) {
             console.log("buzz")
-        } else {
+        } else if (i !==0 && n !==3 && n !==5) {
             console.log(i)
         }
     }
@@ -104,22 +101,22 @@ const spirale = (n) => {
     let debutDeLigne = 0;
     let finDeLigne = n - 1;
     while (debutColonne <= finColonne && debutDeLigne <= finDeLigne) {
-        // Top row
+
         for (let i = debutColonne; i <= finColonne; i++) {
             results[debutDeLigne][i] = compteur;
             compteur++;
         }
-        debutDeLigne++;// Right column
+        debutDeLigne++;
         for (let i = debutDeLigne; i <= finDeLigne; i++) {
             results[i][finColonne] = compteur;
             compteur++;
         }
-        finColonne--;// Bottom row
+        finColonne--;
         for (let i = finColonne; i >= debutColonne; i--) {
             results[finDeLigne][i] = compteur;
             compteur++;
         }
-        finDeLigne--;// start column
+        finDeLigne--;
         for (let i = finDeLigne; i >= debutDeLigne; i--) {
             results[i][debutColonne] = compteur;
             compteur++;
@@ -127,7 +124,7 @@ const spirale = (n) => {
         debutColonne++;
     }
     return results;
-};
+ };
 
 
 const puissance4 = (grid) => {
