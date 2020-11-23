@@ -10,6 +10,10 @@ const anagrammes = (stringA, stringB) => {
    * anagrams('RAIL! SAFETY!', 'fairy tales') === true
    * anagrams('Hi there', 'Bye there') === false
    */
+  const sanitizeString = function (str) {
+    return str.toLowerCase().replace(/[^a-z\d]/g, '').split('').sort().join('');
+  }
+  return sanitizeString(stringA) == sanitizeString(stringB)
 
 };
 
