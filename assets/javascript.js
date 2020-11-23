@@ -26,33 +26,33 @@ class Stack {
  *  - `pop` pour retirer le dernier élément et le retourner;
  *  - et `peek` pour récupérer le premeier élément.
  */
-
-  constructor() {
-    this.tab = [];
-    this.top = 0;
-  }
-
-  push(element)
-  {
-    // push element into the items
-    this.tab.push(element);
-    this.top = this.top + 1;
-  }
-
-  pop()
-  {
-    // return top most element in the stack
-    // and removes it from the stack
-    // Underflow if stack is empty
-    if (this.tab.length == 0)
-      return "Underflow";
-    return this.tab.pop();
-  }
-
-  peek() {
-    let i = this.tab.length;
-    return this.tab[0];
-  }
+  //
+  // constructor() {
+  //   this.tab = [];
+  //   this.top = 0;
+  // }
+  //
+  // push(element)
+  // {
+  //   // push element into the items
+  //   this.tab.push(element);
+  //   this.top = this.top + 1;
+  // }
+  //
+  // pop()
+  // {
+  //   // return top most element in the stack
+  //   // and removes it from the stack
+  //   // Underflow if stack is empty
+  //   if (this.tab.length == 0)
+  //     return "Underflow";
+  //   return this.tab.pop();
+  // }
+  //
+  // peek() {
+  //   let i = this.tab.length;
+  //   return this.tab[0];
+  // }
 };
 
 
@@ -70,6 +70,16 @@ const fizzBuzz = (n) => {
  * console.log(4)
  * console.log('buzz')
  */
+for (var i = 0; i<n ; i++){
+
+  if (n ===3){
+    console.log("fizz")
+  }else if(n ===5){
+    console.log("buzz")
+  }else {
+    console.log(i)
+  }
+}
 
 };
 
