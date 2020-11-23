@@ -25,23 +25,40 @@ class Stack {
  *  - `push`: pour ajouter un élément au bout de l'empilement,
  *  - `pop` pour retirer le dernier élément et le retourner;
  *  - et `peek` pour récupérer le premeier élément.
- *
- * Exemples :
- *
- * const s = new Stack();
- * s.push(1);
- * s.push(2);
- * s.push(3);
- * s.pop(); // returns 3
- * s.pop(); // returns 2
- * s.peek(); // returns 1
  */
+
+  constructor() {
+    this.tab = [];
+    this.top = 0;
+  }
+
+  push(element)
+  {
+    // push element into the items
+    this.tab.push(element);
+    this.top = this.top + 1;
+  }
+
+  pop()
+  {
+    // return top most element in the stack
+    // and removes it from the stack
+    // Underflow if stack is empty
+    if (this.tab.length == 0)
+      return "Underflow";
+    return this.tab.pop();
+  }
+
+  peek() {
+    let i = this.tab.length;
+    return this.tab[0];
+  }
 };
 
 
 const fizzBuzz = (n) => {
 /**
- * Affiche les nombres de 1 à n, en remplaçant les multiples de 3 par fizz et 
+ * Affiche les nombres de 1 à n, en remplaçant les multiples de 3 par fizz et
  * les multiples de 5 par buzz
  *
  * Exemple :
