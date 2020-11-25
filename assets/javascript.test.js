@@ -8,15 +8,15 @@ describe('La fonction anagramme', () => {
   });
 
   test('doit valider deux phrases anagrammes.', () => {
-    expect(anagrams('hello', 'llohe')).toBeTruthy();
-    expect(anagrams('Whoa! Hi!', 'Hi! Whoa!')).toBeTruthy();
-    expect(anagrams('RAIL! SAFETY!', 'fairy tales')).toBeTruthy();
+    expect(anagrammes('hello', 'llohe')).toBeTruthy();
+    expect(anagrammes('Whoa! Hi!', 'Hi! Whoa!')).toBeTruthy();
+    expect(anagrammes('RAIL! SAFETY!', 'fairy tales')).toBeTruthy();
   });
 
   test('doit refuser deux phrass qui ne sont pas des anagrammes.', () => {
-    expect(anagrams('One One', 'Two two two')).toBeFalsy();
-    expect(anagrams('One one', 'One one c')).toBeFalsy();
-    expect(anagrams('A tree, a life, a bench', 'A tree, a fence, a yard')).toBeFalsy();
+    expect(anagrammes('One One', 'Two two two')).toBeFalsy();
+    expect(anagrammes('One one', 'One one c')).toBeFalsy();
+    expect(anagrammes('A tree, a life, a bench', 'A tree, a fence, a yard')).toBeFalsy();
   });
 });
 
@@ -90,7 +90,6 @@ describe('La fonction matrice', () => {
   });
 });
 
-
 describe('La fonction FizzBuzz', () => {
   beforeEach(() => {
     jest.spyOn(console, 'log');
@@ -131,53 +130,53 @@ describe('La fonction FizzBuzz', () => {
     expect(console.log.mock.calls[14][0]).toEqual('fizzbuzz');
   });
 });
+//
+//
+// describe('La fonction puissance4', () => {
+//   test('doit exister', () => {
+//     expect(puissance4).toBeDefined();
+//     expect(typeof puissance4).toEqual('function');
+//   });
 
-
-describe('La fonction puissance4', () => {
-  test('doit exister', () => {
-    expect(puissance4).toBeDefined();
-    expect(typeof puissance4).toEqual('function');
-  });
-
-  test('doit vérifier quand le joueur 1 gagne', () => {
-    expect(puissance4(
-     [[ 1, 0, 0, 0 ],
-      [ 2, 1, 0, 0 ],
-      [ 2, 1, 1, 2 ],
-      [ 2, 1, 1, 2 ]]
-      )).toEqual(1);
-
-    expect(puissance4(
-     [[ 0, 0, 0, 1 ],
-      [ 2, 1, 1, 2 ],
-      [ 2, 1, 1, 2 ],
-      [ 1, 2, 2, 2 ]]
-      )).toEqual(1);
-  });
-
-  test('doit vérifier quand le joueur 2 gagne', () => {
-    expect(puissance4(
-     [[ 1, 2, 0, 0, 0 ],
-      [ 1, 2, 2, 0, 0 ],
-      [ 2, 2, 1, 1, 2 ],
-      [ 2, 2, 1, 1, 2 ]]
-      )).toEqual(2);
-
-    expect(puissance4(
-     [[ 1, 2, 0, 0, 0 ],
-      [ 1, 1, 2, 0, 0 ],
-      [ 2, 2, 1, 1, 2 ],
-      [ 2, 2, 2, 2, 1 ]]
-      )).toEqual(2);
-  });
-
-  test('doit vérifier quand aucun joueur ne gagne', () => {
-    expect(puissance4(
-     [[ 1, 1, 0, 0, 0 ],
-      [ 2, 2, 2, 0, 0 ],
-      [ 2, 2, 1, 1, 2 ],
-      [ 2, 2, 1, 1, 2 ]]
-      )).toEqual(0);
-  });
-});
+  // test('doit vérifier quand le joueur 1 gagne', () => {
+  //   expect(puissance4(
+  //    [[ 1, 0, 0, 0 ],
+  //     [ 2, 1, 0, 0 ],
+  //     [ 2, 1, 1, 2 ],
+  //     [ 2, 1, 1, 2 ]]
+  //     )).toEqual(1);
+  //
+  //   expect(puissance4(
+  //    [[ 0, 0, 0, 1 ],
+  //     [ 2, 1, 1, 2 ],
+  //     [ 2, 1, 1, 2 ],
+  //     [ 1, 2, 2, 2 ]]
+  //     )).toEqual(1);
+  // });
+  //
+  // test('doit vérifier quand le joueur 2 gagne', () => {
+  //   expect(puissance4(
+  //    [[ 1, 2, 0, 0, 0 ],
+  //     [ 1, 2, 2, 0, 0 ],
+  //     [ 2, 2, 1, 1, 2 ],
+  //     [ 2, 2, 1, 1, 2 ]]
+  //     )).toEqual(2);
+  //
+  //   expect(puissance4(
+  //    [[ 1, 2, 0, 0, 0 ],
+  //     [ 1, 1, 2, 0, 0 ],
+  //     [ 2, 2, 1, 1, 2 ],
+  //     [ 2, 2, 2, 2, 1 ]]
+  //     )).toEqual(2);
+  // });
+  //
+  // test('doit vérifier quand aucun joueur ne gagne', () => {
+  //   expect(puissance4(
+  //    [[ 1, 1, 0, 0, 0 ],
+  //     [ 2, 2, 2, 0, 0 ],
+  //     [ 2, 2, 1, 1, 2 ],
+  //     [ 2, 2, 1, 1, 2 ]]
+  //     )).toEqual(0);
+  // });
+// });
 
