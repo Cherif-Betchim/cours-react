@@ -7,24 +7,35 @@ En pratique, des librairies comme [Formik](https://formik.org/) proposent une AP
 
 Lisez [le code lié à ce TP](https://codesandbox.io/s/tp-react-form-itrhu?file=/src/index.js) puis répondez aux questions.
 
-**1. Décrire le rôle de chaque fonction (une phrase par fonction).**
-Pour la fonction validateEmail vérifie grâce à une regex si la value est bien une adresse email. Si la chaine de caractère ne correspond pas à la requète Regex elle renvoie "une adresse email est obligatoire". 
-La fonction validateName vérifie si l'input name est vide sinon elle retourne et affiche "Un nom est obligatoire". 
-La fonction NameField créer l'input nom et met une valeur dedans et ensuite elle vérifie la fonction validateName.
-La fonction EmailField
+**1. Décrire le rôle de chaque fonction (une phrase par fonction).**  
+Pour la fonction validateEmail vérifie grâce à une regex si la value est bien une adresse email. Si la chaine de caractère ne correspond pas à la requète Regex elle renvoie "une adresse email est obligatoire".  
+La fonction validateName vérifie si l'input name est vide sinon elle retourne et affiche "Un nom est obligatoire".  
+La fonction NameField créer l'input nom et met une valeur dedans et ensuite elle vérifie la fonction validateName.  
+La fonction EmailField en retrun elle ecrit en html l'inpur email mail et elle me ajour ce que on tap dans l'input a l'aide de onChange  
 
 **2. Quelles sont les states et les props mis en jeu ? Indiquez leur valeur par défaut.**
 
+**les 3 states sont :**  
+isSubmit par défaut elle est false,  
+name par défaut elle est false,  
+email par défaut elle est false.  
+**les props sont :**   Name, Email  
+
 **3. Que contient la variable `event` dans `onChange={(event) => setName(event.target.value)}`? Vous pouvez la scruter à l'aide de `console.log`.**
 
-**4. Pourquoi doit-on encapsuler un espace avec `{" "}` ?**
+**4. Pourquoi doit-on encapsuler un espace avec `{" "}` ?**  
+  pour dire que c'est du code dans l'HTML  
 
-**5. Peut-on transmettre une fonction dans un Props ?**
+**5. Peut-on transmettre une fonction dans un Props ?**  
+  OUI
 
 **6. Précisez étape par étape ce que fait React lorsque le champ nom est modifié.**
+      
 
-**7. Expliquez la regex pour valider un email. Vous pouvez la recopier dans regex101.com pour vous aider.**
 
+**7. Expliquez la regex pour valider un email. Vous pouvez la recopier dans regex101.com pour vous aider.**  
+    Cette requet Regex elle permet de vérifier que ce que l'utilisateur tape dans l'input et bien une chaine de characteurs avec quelques characteurs autorisée suivi par un @ suivi par un chaine de characteurs puis un . puis un seul characteur
+    
 
 ## Mini-projet : un timer
 
