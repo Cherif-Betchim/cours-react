@@ -8,6 +8,10 @@ En pratique, des librairies comme [Formik](https://formik.org/) proposent une AP
 Lisez [le code lié à ce TP](https://codesandbox.io/s/tp-react-form-itrhu?file=/src/index.js) puis répondez aux questions.
 
 **1. Décrire le rôle de chaque fonction (une phrase par fonction).**
+Pour la fonction validateEmail vérifie grâce à une regex si la value est bien une adresse email. Si la chaine de caractère ne correspond pas à la requète Regex elle renvoie "une adresse email est obligatoire". 
+La fonction validateName vérifie si l'input name est vide sinon elle retourne et affiche "Un nom est obligatoire". 
+La fonction NameField créer l'input nom et met une valeur dedans et ensuite elle vérifie la fonction validateName.
+La fonction EmailField
 
 **2. Quelles sont les states et les props mis en jeu ? Indiquez leur valeur par défaut.**
 
