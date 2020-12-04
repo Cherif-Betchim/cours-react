@@ -7,9 +7,12 @@ Pour bien comprendre ce qui se trame dans le routage, nous ré-implémentons les
 
 Notre version de `Link`, appelée `CustomLink` accepte un props `to` sous la forme d'une chaîne de caractères. Lorsqu'un utilisateur clique sur `Link`, il est redirigé vers la page indiquée par `to`.
 
-**1. Comment fait-on une redirection avec `react-router` ?**
-
+**1. Comment fait-on une redirection avec `react-router` ?**   
+   `On fait redirection a l'aide de history.push('url')`
 Mais comment avoir accès à cet objet que vous venez d'évoquer ? Dans le cours, il était injecté par `Route`. Cette fois-ci, nous allons utiliser la fonction [`useHistory`](https://reactrouter.com/web/api/Hooks/usehistory). 
+
+nous avons accès a cette objet on important la librairie react router dom a l'aide de cette commande {BrowserRouter as Router, Route } from "react-router-dom";   
+
 
 **2. Après avoir lu la documentation correspondante, décrivez le fonctionnement de cette fonction.**
 
