@@ -7,13 +7,20 @@ Pour bien comprendre ce qui se trame dans le routage, nous ré-implémentons les
 
 Notre version de `Link`, appelée `CustomLink` accepte un props `to` sous la forme d'une chaîne de caractères. Lorsqu'un utilisateur clique sur `Link`, il est redirigé vers la page indiquée par `to`.
 
-**1. Comment fait-on une redirection avec `react-router` ?**
-
+**1. Comment fait-on une redirection avec `react-router` ?**   
+   `On fait redirection a l'aide de history.push('url')`   
 Mais comment avoir accès à cet objet que vous venez d'évoquer ? Dans le cours, il était injecté par `Route`. Cette fois-ci, nous allons utiliser la fonction [`useHistory`](https://reactrouter.com/web/api/Hooks/usehistory). 
 
-**2. Après avoir lu la documentation correspondante, décrivez le fonctionnement de cette fonction.**
+nous avons accès a cette objet on important la librairie react router dom a l'aide de cette commande 
+      
+      import { useHistory } from "react-router-dom";   
 
-**3. En utilisant cette fonction, devez-vous implémenter le `CustomLink` composant sous la forme d'une fonction ou d'une classe ?**
+
+**2. Après avoir lu la documentation correspondante, décrivez le fonctionnement de cette fonction.**   
+      Le useHistory est un Hook qui nous donne accès à l'instance d'historique qui nous permet de naviguer en les page a l'aide d'un `history.push('url')` dans un element du dom    .
+
+**3. En utilisant cette fonction, devez-vous implémenter le `CustomLink` composant sous la forme d'une fonction ou d'une classe ?**   
+      On les implémenter en tant que classe est pas fonction   
 
 **4. Faites l'implémentation de `CustomLink`, ajoutez les `propTypes`, testez la dans une codesandbox et copiez votre implémentation de `CustomLink` dans ce document.**
 

@@ -74,10 +74,19 @@ __proto__: Object
 
 **4. Pourquoi doit-on encapsuler un espace avec `{" "}` ?**
 Cela permet de rajouter un espace entre l'input et le message d'erreur.
+On encapsule avec {} pour évaluer une expression JavaScript 
+Exemple :
+```
+     return (
+        <div className="App">
+                {loading ? (<Loader />) : error ? (<Error>) : ( <Message /> }
+        </div>
+    );
+```    
 
 **5. Peut-on transmettre une fonction dans un Props ?**
 Oui c'est possible à la ligne 32 setName est passé c'est une fonction et on l'utilise à la ligne 39.
-
+Les props peuvent prendre n'importe quel type JavaScript natif par exemple(des tableaux, des valeurs booléennes, des d'objet, des fonctions, etc)
 **6. Précisez étape par étape ce que fait React lorsque le champ nom est modifié.**
 À chaque fois que le champ nom est modifié React émet un événement (ligne 39) qu'on intercepte afin de réaffecter la valeur de la props name via la méthode setName qui est elle même une props du composant NameField  (ligne 79|32) et qui provient du state de son composant parent (ligne 66).
 
