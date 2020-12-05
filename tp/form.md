@@ -24,10 +24,20 @@ email par défaut elle est false.
 **3. Que contient la variable `event` dans `onChange={(event) => setName(event.target.value)}`? Vous pouvez la scruter à l'aide de `console.log`.**
 
 **4. Pourquoi doit-on encapsuler un espace avec `{" "}` ?**  
-  pour dire que c'est du code dans l'HTML  
+   En encapsule avec {} pour évaluer une expression JavaScript example:   
+     
+     
+     
+     return (
+        <div className="App">
+                {loading ? (<Loader />) : error ? (<Error>) : ( <Message /> }
+        </div>
+    );
+    
+    
 
 **5. Peut-on transmettre une fonction dans un Props ?**  
-  OUI
+  Oui Les props peuvent prendre n'importe quel type JavaScript natif par exemple(des tableaux, des valeurs booléennes, des d'objet, des fonctions, etc)
 
 **6. Précisez étape par étape ce que fait React lorsque le champ nom est modifié.**
       
