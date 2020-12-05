@@ -6,7 +6,8 @@
 
 - Les [tests automatisés](../assets/javascript.test.js) doivent passer en lançant la commande :
 
-```js
+```
+js
 npm test javascript.test.js
 ```
 
