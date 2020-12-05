@@ -17,12 +17,29 @@ nous avons accès a cette objet on important la librairie react router dom a l'a
 
 
 **2. Après avoir lu la documentation correspondante, décrivez le fonctionnement de cette fonction.**   
-      Le useHistory est un Hook qui nous donne accès à l'instance d'historique qui nous permet de naviguer en les page a l'aide d'un `history.push('url')` dans un element du dom    .
+      Le useHistory est un Hook qui nous donne accès à l'instance d'historique qui nous permet de naviguer en les page a l'aide d'un `history.push('url')` dans un element du dom    .   
+      Pour le fonctionement de withRouter :
+      on cree un composant de classe puis dans le render () nous utilisons la déstructuration d'objet pour obtenir les trois valeurs  (match, location, history). enfin on retourne par example: <div> Vous êtes maintenant à {location.pathname} </div> qui retour une URL
 
 **3. En utilisant cette fonction, devez-vous implémenter le `CustomLink` composant sous la forme d'une fonction ou d'une classe ?**   
-      On les implémenter en tant que classe est pas fonction   
+      On les implémenter en tant que classe est pas fonction
+      pour withRouter   
+      on l'implément en tant que classe
+     
 
-**4. Faites l'implémentation de `CustomLink`, ajoutez les `propTypes`, testez la dans une codesandbox et copiez votre implémentation de `CustomLink` dans ce document.**
+**4. Faites l'implémentation de `CustomLink`, ajoutez les `propTypes`, testez la dans une codesandbox et copiez votre implémentation de `CustomLink` dans ce document.**   
+          Pour CustomLink
+          
+            <div className="App">
+            <Router>
+                <Navigation/>
+                <Route path="/" exact component={Home}/>
+                <Route path="/About" exact component={About}/>
+                <Route path="/Contact" exact component={Contact}/>
+            </Router>
+        </div>
+         
+         
 
 Pour procéder à l'implémentation de `CustomLink` sous l'autre forme (classe ou fonction, selon votre réponse à la question 3.), nous utiliserons la fonction [`withRouter`](https://reactrouter.com/web/api/withRouter). Il s'agit d'un HOC ; nous les verrons en détail dans un prochain cours.
 
@@ -38,8 +55,27 @@ Notre composant `CustomRoute` accepte deux props:
 
 **6. Dans la documentation de la `react-router`, trouvez trois hooks permettant d'obtenir les variables `history`, `location` et `match`.**
 
-**7. Faites l'implémentation de `CustomRoute`, ajoutez les `propTypes`, testez la dans une codesandbox et copiez votre implémentation de `CustomRoute` dans ce document.**
+      les trois hook sont : huseHistory, useLocation, useRouteMatch
 
+**7. Faites l'implémentation de `CustomRoute`, ajoutez les `propTypes`, testez la dans une codesandbox et copiez votre implémentation de `CustomRoute` dans ce document.**
+          
+      
+    import {BrowserRouter as Router, Route } from "react-router-dom";
+    
+    export default function App() {
+
+    return (
+        <div className="App">
+            <Router>
+                <Navigation/>
+                <Route path="/" exact component={Home}/>
+                <Route path="/About" exact component={About}/>
+                <Route path="/Contact" exact component={Contact}/>
+            </Router>
+        </div>
+    );
+    }
+        
 
 ## Tester le routage avec React
 
